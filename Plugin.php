@@ -19,7 +19,7 @@ class Plugin extends PluginBase
         return [
             'name'        => 'dLearning',
             'description' => 'No description provided yet...',
-            'author'      => 'Queni',
+            'author'      => 'Rulan Puryaev, Aleksei Fedorov',
             'icon'        => 'icon-leaf'
         ];
     }
