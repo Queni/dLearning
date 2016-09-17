@@ -11,7 +11,12 @@ class CreateCategoriesTable extends Migration
         Schema::create('queni_dlearning_categories', function(Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->timestamps();
+            $table->string('name', 200);
+            $table->integer('parent_category_id')->unsigned()->nullable();
+
+            $table->foreign('parent_category_id')
+                    ->references('id')->on('queni_dlearning_categories')
+                    ->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

@@ -10,8 +10,17 @@ class CreateAuthorsTable extends Migration
     {
         Schema::create('queni_dlearning_authors', function(Blueprint $table) {
             $table->engine = 'InnoDB';
-            $table->increments('id');
-            $table->timestamps();
+            $table->integer('course_id')->unsigned();
+            $table->integer('user_id')->unsigned();
+            
+            $table->primary(['course_id', 'user_id']);
+
+            $table->foreign('course_id')
+                    ->references('id')->on('queni_dlearning_courses')
+                    ->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('user_id')
+                    ->references('id')->on('users')
+                    ->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

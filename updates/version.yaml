@@ -1,1 +1,9 @@
-1.0.1: First version of dLearning
+1.0.1:
+    - Created migrations
+    - create_notifications_table.php
+    - create_messages_table.php
+    - create_categories_table.php
+    - create_courses_table.php
+    - create_lessons_table.php
+    - create_authors_table.php
+    - create_availables_courses_table.php

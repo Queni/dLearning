@@ -10,8 +10,16 @@ class CreateNotificationsTable extends Migration
     {
         Schema::create('queni_dlearning_notifications', function(Blueprint $table) {
             $table->engine = 'InnoDB';
-            $table->increments('id');
+            $table->integer('user_id')->unsigned();
+            $table->text('message');
+            $table->boolean('is_read');
             $table->timestamps();
+
+            $table->primary('user_id');
+
+            $table->foreign('user_id')
+                    ->references('id')->on('users')
+                    ->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
