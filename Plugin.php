@@ -18,9 +18,9 @@ class Plugin extends PluginBase
     {
         return [
             'name'        => 'dLearning',
-            'description' => 'No description provided yet...',
+            'description' => 'Learning management system.',
             'author'      => 'Rulan Puryaev, Aleksei Fedorov',
-            'icon'        => 'icon-leaf'
+            'icon'        => 'icon-graduation-cap'
         ];
     }
 
