@@ -36,4 +36,11 @@ class Lessons extends Model
     public $attachOne = [];
     public $attachMany = [];
 
+    /**
+     * Indicates if the model should be timestamped.
+     *
+     * @var bool
+     */
+    public $timestamps = false;
+
 }
