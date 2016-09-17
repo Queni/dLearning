@@ -20,7 +20,8 @@ class Plugin extends PluginBase
             'name'        => 'dLearning',
             'description' => 'Learning management system.',
             'author'      => 'Rulan Puryaev, Aleksei Fedorov',
-            'icon'        => 'icon-graduation-cap'
+            'icon'        => 'icon-graduation-cap',
+            'homepage'    => 'https://github.com/queni/dlearning'
         ];
     }
 
