@@ -96,6 +96,11 @@ class Plugin extends PluginBase
                         'icon'        => 'icon-list-alt',
                         'url'         => \Backend::url('queni/dlearning/courses'),
                     ],
+                    'lessons' => [
+                        'label'       => 'Уроки',
+                        'icon'        => 'icon-list-alt',
+                        'url'         => \Backend::url('queni/dlearning/lessons'),
+                    ],
                 ],
             ],
         ];
