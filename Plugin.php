@@ -87,15 +87,20 @@ class Plugin extends PluginBase
      */
     public function registerNavigation()
     {
-        return []; // Remove this line to activate
-
         return [
             'dlearning' => [
                 'label'       => 'dLearning',
-                'url'         => Backend::url('queni/dlearning/mycontroller'),
+                'url'         => Backend::url('queni/dlearning/courses'),
                 'icon'        => 'icon-leaf',
                 'permissions' => ['queni.dlearning.*'],
                 'order'       => 500,
+                'sideMenu' => [
+                    'courses' => [
+                        'label'       => 'Курсы',
+                        'icon'        => 'icon-list-alt',
+                        'url'         => \Backend::url('queni/dlearning/courses'),
+                    ],
+                ],
             ],
         ];
     }
