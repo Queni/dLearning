@@ -3,6 +3,11 @@
 # ===================================
 
 fields:
-    id:
-        label: ID
-        disabled: true
+    course:
+        label: Курс
+        type: dropdown
+    name:
+        label: Название
+    content:
+        label: Контент
+        type: richeditor

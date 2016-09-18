@@ -5,4 +5,10 @@
 columns:
     id:
         label: ID
+    name:
+        label: Название
         searchable: true
+    category:
+        label: Родительская категория
+        relation: parent_category
+        select: name

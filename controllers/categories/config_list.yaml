@@ -3,17 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: $/queni/dlearning/models/courses/columns.yaml
+list: $/queni/dlearning/models/categories/columns.yaml
 
 # Model Class name
-modelClass: Queni\DLearning\Models\Courses
+modelClass: Queni\DLearning\Models\Categories
 
 # List Title
-title: Manage Courses
+title: Manage Categories
 
 # Link URL for each record
-recordUrl: queni/dlearning/courses/update/:id
-#recordUrl: queni/dlearning/courses/preview/:id
+recordUrl: queni/dlearning/categories/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

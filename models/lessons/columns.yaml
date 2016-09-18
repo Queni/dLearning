@@ -5,4 +5,10 @@
 columns:
     id:
         label: ID
+    name:
+        label: Название
+    course:
+        label: Курс
+        relation: course
+        select: name
         searchable: true

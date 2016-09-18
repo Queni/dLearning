@@ -29,7 +29,7 @@ class Lessons extends Model
     public $hasOne = [];
     public $hasMany = [];
     public $belongsTo = [
-        'course' => ['Queni\DLearning\Models\Courses', 'key' => 'category_id']
+        'course' => ['Queni\DLearning\Models\Courses']
     ];
     public $belongsToMany = [];
     public $morphTo = [];
@@ -44,5 +44,18 @@ class Lessons extends Model
      * @var bool
      */
     public $timestamps = false;
+
+    public function getCourseOptions()
+    {
+        $categories = Courses::orderBy('name')->get(['id', 'name']);
+        $options = [];
+
+        foreach($categories as $value)
+        {
+            $options[$value['id']] = $value['name'];
+        }
+
+        return $options;
+    }
 
 }
