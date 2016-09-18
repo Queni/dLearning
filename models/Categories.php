@@ -26,8 +26,12 @@ class Categories extends Model
     /**
      * @var array Relations
      */
-    public $hasOne = [];
-    public $hasMany = [];
+    public $hasOne = [
+        'parent_category' => ['Queni\DLearning\Models\Categories', 'key' => 'parent_category_id']
+    ];
+    public $hasMany = [
+        'courses' => ['Queni\DLearning\Models\Courses', 'key' => 'category_id']
+    ];
     public $belongsTo = [];
     public $belongsToMany = [];
     public $morphTo = [];

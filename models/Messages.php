@@ -28,7 +28,10 @@ class Messages extends Model
      */
     public $hasOne = [];
     public $hasMany = [];
-    public $belongsTo = [];
+    public $belongsTo = [
+        'sender' => ['RainLab\User\Models\User', 'key' => 'sender_id'],
+        'reciever' => ['RainLab\User\Models\User', 'key' => 'reciever_id']
+    ];
     public $belongsToMany = [];
     public $morphTo = [];
     public $morphOne = [];

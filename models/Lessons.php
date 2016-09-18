@@ -28,7 +28,9 @@ class Lessons extends Model
      */
     public $hasOne = [];
     public $hasMany = [];
-    public $belongsTo = [];
+    public $belongsTo = [
+        'course' => ['Queni\DLearning\Models\Courses', 'key' => 'category_id']
+    ];
     public $belongsToMany = [];
     public $morphTo = [];
     public $morphOne = [];

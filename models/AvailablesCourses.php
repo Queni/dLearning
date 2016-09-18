@@ -27,7 +27,10 @@ class AvailablesCourses extends Model
      * @var array Relations
      */
     public $hasOne = [];
-    public $hasMany = [];
+    public $hasMany = [
+        'course' => ['Queni\DLearning\Models\Courses', 'foreignKey' => 'id'],
+        'user' => ['RainLab\User\Models\User', 'foreignKey' => 'id']
+    ];
     public $belongsTo = [];
     public $belongsToMany = [];
     public $morphTo = [];
