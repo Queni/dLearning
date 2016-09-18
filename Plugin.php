@@ -70,13 +70,9 @@ class Plugin extends PluginBase
      */
     public function registerPermissions()
     {
-        return []; // Remove this line to activate
 
         return [
-            'queni.dlearning.some_permission' => [
-                'tab' => 'dLearning',
-                'label' => 'Some permission'
-            ],
+            'queni.dlearning.access_courses' => ['tab' => 'Дистанционное обучение', 'label' => 'Возможность редактирования курсов']
         ];
     }
 
