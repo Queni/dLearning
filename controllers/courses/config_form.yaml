@@ -17,16 +17,16 @@ defaultRedirect: queni/dlearning/courses
 # Create page
 create:
     title: Create Course
-    redirect: queni/dlearning/courses/preview/:id
-    #redirect: queni/dlearning/courses/update/:id
+    #redirect: queni/dlearning/courses/preview/:id
+    redirect: queni/dlearning/courses/update/:id
     redirectClose: queni/dlearning/courses
 
 # Update page
 update:
     title: Edit Course
     redirect: queni/dlearning/courses
-    #redirectClose: queni/dlearning/courses
-    redirectClose: queni/dlearning/courses/preview/:id
+    redirectClose: queni/dlearning/courses
+    #redirectClose: queni/dlearning/courses/preview/:id
 
 # Preview page
 preview:

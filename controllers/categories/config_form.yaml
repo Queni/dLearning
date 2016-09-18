@@ -6,10 +6,10 @@
 name: Category
 
 # Model Form Field configuration
-form: $/queni/dlearning/models/category/fields.yaml
+form: $/queni/dlearning/models/categories/fields.yaml
 
 # Model Class name
-modelClass: Queni\DLearning\Models\Category
+modelClass: Queni\DLearning\Models\Categories
 
 # Default redirect location
 defaultRedirect: queni/dlearning/categories

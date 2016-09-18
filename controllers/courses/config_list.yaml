@@ -12,8 +12,8 @@ modelClass: Queni\DLearning\Models\Courses
 title: Manage Courses
 
 # Link URL for each record
-#recordUrl: queni/dlearning/courses/update/:id
-recordUrl: queni/dlearning/courses/preview/:id
+recordUrl: queni/dlearning/courses/update/:id
+#recordUrl: queni/dlearning/courses/preview/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

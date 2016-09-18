@@ -3,6 +3,8 @@
 # ===================================
 
 fields:
-    id:
-        label: ID
-        disabled: true
+    name:
+        label: Название
+    category:
+        label: Родительская категория
+        type: dropdown

@@ -3,10 +3,10 @@
 # ===================================
 
 # Model List Column configuration
-list: $/queni/dlearning/models/category/columns.yaml
+list: $/queni/dlearning/models/categories/columns.yaml
 
 # Model Class name
-modelClass: Queni\DLearning\Models\Category
+modelClass: Queni\DLearning\Models\Categories
 
 # List Title
 title: Manage Categories
