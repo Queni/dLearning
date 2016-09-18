@@ -41,4 +41,17 @@ class Courses extends Model
     public $attachOne = [];
     public $attachMany = [];
 
+    public function getCategoryOptions()
+    {
+        $categories = Categories::orderBy('name')->get(['id', 'name']);
+        $options = [];
+
+        foreach($categories as $value)
+        {
+            $options[$value['id']] = $value['name'];
+        }
+
+        return $options;
+    }
+
 }

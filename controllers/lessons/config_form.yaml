@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Lesson
+
+# Model Form Field configuration
+form: $/queni/dlearning/models/lessons/fields.yaml
+
+# Model Class name
+modelClass: Queni\DLearning\Models\Lessons
+
+# Default redirect location
+defaultRedirect: queni/dlearning/lessons
+
+# Create page
+create:
+    title: Create Lesson
+    redirect: queni/dlearning/lessons/update/:id
+    redirectClose: queni/dlearning/lessons
+
+# Update page
+update:
+    title: Edit Lesson
+    redirect: queni/dlearning/lessons
+    redirectClose: queni/dlearning/lessons
+
+# Preview page
+preview:
+    title: Preview Lesson
