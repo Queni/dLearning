@@ -56,10 +56,8 @@ class Plugin extends PluginBase
      */
     public function registerComponents()
     {
-        return []; // Remove this line to activate
-
         return [
-            'Queni\DLearning\Components\MyComponent' => 'myComponent',
+            'Queni\DLearning\Components\AllCourses' => 'AllCourses',
         ];
     }
 
