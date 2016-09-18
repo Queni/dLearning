@@ -11,6 +11,10 @@
         <?= $this->formRenderPreview() ?>
     </div>
 
+    <div class="layout-row">
+        <?= $this->formRender(['preview' => true, 'section' => 'primary']) ?>
+    </div>
+
 <?php else: ?>
 
     <p class="flash-message static error"><?= e($this->fatalError) ?></p>
