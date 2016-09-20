@@ -5,5 +5,8 @@
 fields:
     course_id:
         label: Курс
+        relation: user_courses
+        select: name
     user_id:
         label: Пользователь
+        select: name

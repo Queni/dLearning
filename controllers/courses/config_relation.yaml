@@ -3,9 +3,7 @@
 # ===================================
 
 users:
-    label: Доступные курсы
+    label: пользователя
     list: $/queni/dlearning/models/availablescourses/columns_relation.yaml
-    #manage: $/queni/dlearning/models/availablescourses/columns.yaml
-    form: $/queni/dlearning/models/availablescourses/fields_relation.yaml
     view:
         toolbarButtons: add|remove

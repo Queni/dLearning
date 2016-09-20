@@ -4,8 +4,9 @@
 
 columns:
     course_id:
+        hidden: true
         label: Курс
-        relation: course
+        relation: courses
         select: name
     user_id:
         label: Пользователь
