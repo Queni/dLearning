@@ -7,11 +7,13 @@ use Model;
  */
 class AvailablesCourses extends Model
 {
-
+    
     /**
      * @var string The database table used by the model.
      */
     public $table = 'queni_dlearning_availables_courses';
+
+    // protected $primaryKey = array('course_id', 'user_id');
 
     /**
      * @var array Guarded fields
@@ -27,11 +29,11 @@ class AvailablesCourses extends Model
      * @var array Relations
      */
     public $hasOne = [];
-    public $hasMany = [
-        'course' => ['Queni\DLearning\Models\Courses', 'foreignKey' => 'id'],
-        'user' => ['RainLab\User\Models\User', 'foreignKey' => 'id']
+    public $hasMany = [];
+    public $belongsTo = [
+        'user' => ['Queni\DLearning\Models\Users'],
+        'course' => ['Queni\DLearning\Models\Courses']
     ];
-    public $belongsTo = [];
     public $belongsToMany = [];
     public $morphTo = [];
     public $morphOne = [];

@@ -3,6 +3,11 @@
 # ===================================
 
 columns:
-    id:
-        label: ID
-        searchable: true
+    course_id:
+        label: Курс
+        relation: course
+        select: name
+    user_id:
+        label: Пользователь
+        relation: user
+        select: name
