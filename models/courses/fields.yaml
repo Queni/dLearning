@@ -2,13 +2,18 @@
 #  Form Field Definitions
 # ===================================
 
-
-fields:
-    name:
-    label: Название
-category:
-    label: Категория
-    type: dropdown
-description:
-    label: Описание
-    type: richeditor
+tabs:
+    defaultTab: Редактирование курса
+    fields:
+        name:
+            label: Название
+        category:
+            label: Категория
+            type: dropdown
+        description:
+            label: Описание
+            type: richeditor
+        users:
+            tab: Доступ к курсу
+            type: partial
+            path: users
