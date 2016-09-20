@@ -2,12 +2,13 @@
 #  Form Field Definitions
 # ===================================
 
+
 fields:
     name:
-        label: Название
-    category:
-        label: Категория
-        type: dropdown
-    description:
-        label: Описание
-        type: richeditor
+    label: Название
+category:
+    label: Категория
+    type: dropdown
+description:
+    label: Описание
+    type: richeditor

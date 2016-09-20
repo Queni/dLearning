@@ -27,11 +27,11 @@ class Authors extends Model
      * @var array Relations
      */
     public $hasOne = [];
-    public $hasMany = [
-        'course' => ['Queni\DLearning\Models\Courses', 'foreignKey' => 'id'],
-        'user' => ['RainLab\User\Models\User', 'foreignKey' => 'id']
+    public $hasMany = [];
+    public $belongsTo = [
+        'user' => ['Queni\DLearning\Models\Users'],
+        'course' => ['Queni\DLearning\Models\Courses']
     ];
-    public $belongsTo = [];
     public $belongsToMany = [];
     public $morphTo = [];
     public $morphOne = [];
@@ -45,5 +45,31 @@ class Authors extends Model
      * @var bool
      */
     public $timestamps = false;
+
+    public function getCourseIdOptions()
+    {
+        $categories = Courses::orderBy('name')->get(['id', 'name']);
+        $options = [];
+
+        foreach($categories as $value)
+        {
+            $options[$value['id']] = $value['name'];
+        }
+
+        return $options;
+    }
+
+    public function getUserIdOptions()
+    {
+        $categories = \RainLab\User\Models\User::orderBy('name')->get(['id', 'name']);
+        $options = [];
+
+        foreach($categories as $value)
+        {
+            $options[$value['id']] = $value['name'];
+        }
+
+        return $options;
+    }
 
 }
