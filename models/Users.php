@@ -12,7 +12,8 @@ class Users extends User
     {
         parent::__construct();
 
-        $this->belongsToMany['course'] = ['Queni\DLearning\Models\Courses', 'table' => 'queni_dlearning_availables_courses', 'key' => 'course_id', 'otherKey' => 'course_id'];
+        $this->belongsToMany['user_courses'] = ['Queni\DLearning\Models\Courses', 'table' => 'queni_dlearning_availables_courses', 'key' => 'user_id', 'otherKey' => 'course_id'];
+        $this->belongsToMany['author_courses'] = ['Queni\DLearning\Models\Courses', 'table' => 'queni_dlearning_availables_courses', 'key' => 'user_id', 'otherKey' => 'course_id'];
     }
 
 }
