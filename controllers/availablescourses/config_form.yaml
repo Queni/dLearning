@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Availables Course
+
+# Model Form Field configuration
+form: $/queni/dlearning/models/availablescourses/fields.yaml
+
+# Model Class name
+modelClass: Queni\DLearning\Models\AvailablesCourses
+
+# Default redirect location
+defaultRedirect: queni/dlearning/availablescourses
+
+# Create page
+create:
+    title: Create Availables Course
+    redirect: queni/dlearning/availablescourses/update/:course_id/:user_id
+    redirectClose: queni/dlearning/availablescourses
+
+# Update page
+update:
+    title: Edit Availables Course
+    redirect: queni/dlearning/availablescourses
+    redirectClose: queni/dlearning/availablescourses
+
+# Preview page
+preview:
+    title: Preview Availables Course

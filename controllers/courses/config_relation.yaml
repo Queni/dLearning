@@ -1,0 +1,11 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+users:
+    label: Доступные курсы
+    list: $/queni/dlearning/models/availablescourses/columns_relation.yaml
+    #manage: $/queni/dlearning/models/availablescourses/columns.yaml
+    form: $/queni/dlearning/models/availablescourses/fields_relation.yaml
+    view:
+        toolbarButtons: add|remove
