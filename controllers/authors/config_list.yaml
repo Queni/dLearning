@@ -12,7 +12,7 @@ modelClass: Queni\DLearning\Models\Authors
 title: Manage Authors
 
 # Link URL for each record
-recordUrl: queni/dlearning/authors/update/:id
+recordUrl: queni/dlearning/authors/update/:course_id/:user_id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

@@ -17,7 +17,7 @@ defaultRedirect: queni/dlearning/authors
 # Create page
 create:
     title: Create Author
-    redirect: queni/dlearning/authors/update/:id
+    redirect: queni/dlearning/authors/update/:course_id/:user_id
     redirectClose: queni/dlearning/authors
 
 # Update page

@@ -7,3 +7,8 @@ users:
     list: $/queni/dlearning/models/availablescourses/columns_relation.yaml
     view:
         toolbarButtons: add|remove
+authors:
+    label: автора
+    list: $/queni/dlearning/models/authors/columns_relation.yaml
+    view:
+        toolbarButtons: add|remove
