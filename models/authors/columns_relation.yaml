@@ -1,0 +1,13 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    course_id:
+        label: Курс
+        invisible: true
+        relation: author_courses
+        select: name
+    user_id:
+        label: Пользователь
+        select: name
