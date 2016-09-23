@@ -26,13 +26,13 @@ class Categories extends Model
     /**
      * @var array Relations
      */
-    public $hasOne = [
-        'parent_category' => ['Queni\DLearning\Models\Categories', 'key' => 'parent_category_id']
-    ];
+    public $hasOne = [];
     public $hasMany = [
         'courses' => ['Queni\DLearning\Models\Courses', 'key' => 'category_id']
     ];
-    public $belongsTo = [];
+    public $belongsTo = [
+        'parent_category' => ['Queni\DLearning\Models\Categories', 'key' => 'parent_category_id']
+    ];
     public $belongsToMany = [];
     public $morphTo = [];
     public $morphOne = [];
@@ -47,17 +47,22 @@ class Categories extends Model
      */
     public $timestamps = false;
 
-    public function getCategoryOptions()
+    public function getParentCategoryIdOptions()
     {
         $categories = Categories::orderBy('name')->get(['id', 'name']);
-        $options = [];
+        $options = [0 => 'None'];
 
         foreach($categories as $value)
         {
-            $options[$value['id']] = $value['name'];
+            $options[ $value['id'] ] = $value['name'];
         }
 
         return $options;
+    }
+
+    public function beforeSave()
+    {
+        if ($this->parent_category_id == 0) $this->parent_category_id = null;
     }
 
 }

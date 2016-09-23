@@ -29,7 +29,7 @@ class Notifications extends Model
     public $hasOne = [];
     public $hasMany = [];
     public $belongsTo = [
-        'user' => ['RainLab\User\Models\User']
+        'user' => ['Queni\DLearning\Models\Users']
     ];
     public $belongsToMany = [];
     public $morphTo = [];

@@ -28,16 +28,14 @@ class Courses extends Model
      */
     public $hasOne = [];
     public $hasMany = [
-        'lessons' => ['Queni\DLearning\Models\Lessons', 'key' => 'course_id', 'otherKey' => 'id'],
-        // 'authors' => ['Queni\DLearning\Models\Authors', 'key' => 'course_id', 'otherKey' => 'id'],
-        // 'users_courses' => ['Queni\DLearning\Models\AvailablesCourses', 'key' => 'course_id', 'otherKey' => 'id']
+        'lessons' => ['Queni\DLearning\Models\Lessons', 'key' => 'course_id', 'otherKey' => 'id']
     ];
     public $belongsTo = [
         'category' => ['Queni\DLearning\Models\Categories']
     ];
     public $belongsToMany = [
         'users' => ['Queni\DLearning\Models\Users', 'table' => 'queni_dlearning_availables_courses', 'key' => 'course_id', 'otherKey' => 'user_id'],
-        'authors' => ['Queni\DLearning\Models\Authors', 'table' => 'queni_dlearning_authors', 'key' => 'course_id', 'otherKey' => 'user_id'],
+        'authors' => ['Queni\DLearning\Models\Users','table' => 'queni_dlearning_authors', 'key' => 'course_id', 'otherKey' => 'user_id'],
     ];
     public $morphTo = [];
     public $morphOne = [];
