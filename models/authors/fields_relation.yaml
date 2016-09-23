@@ -1,17 +1,12 @@
 # ===================================
-#  List Column Definitions
+#  Form Field Definitions
 # ===================================
 
-columns:
+fields:
     course_id:
-        invisible: true
-    user_id:
-        invisible: true
-    course:
         label: Курс
-        relation: course
+        relation: author_courses
         select: name
-    user:
+    user_id:
         label: Пользователь
-        relation: user
         select: name

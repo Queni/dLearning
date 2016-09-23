@@ -5,9 +5,9 @@
 columns:
     id:
         label: ID
-        searchable: true
     name:
         label: Название
+        searchable: true
     category:
         label: Категория
         relation: category

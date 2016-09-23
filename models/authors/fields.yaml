@@ -7,5 +7,5 @@ fields:
         label: Курс
         type: dropdown
     user_id:
-        label: Автор
+        label: Пользователь
         type: dropdown

@@ -5,6 +5,6 @@
 fields:
     name:
         label: Название
-    category:
+    parent_category_id:
         label: Родительская категория
         type: dropdown

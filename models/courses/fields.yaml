@@ -3,7 +3,7 @@
 # ===================================
 
 tabs:
-    defaultTab: Редактирование курса
+    defaultTab: Информация о курсе
     fields:
         name:
             label: Название
@@ -13,7 +13,11 @@ tabs:
         description:
             label: Описание
             type: richeditor
-        users:
+        authors@update:
+            tab: Авторы
+            type: partial
+            path: authors
+        users@update:
             tab: Доступ к курсу
             type: partial
             path: users
