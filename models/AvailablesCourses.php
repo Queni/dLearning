@@ -13,8 +13,6 @@ class AvailablesCourses extends Model
      */
     public $table = 'queni_dlearning_availables_courses';
 
-    // protected $primaryKey = array('course_id', 'user_id');
-
     /**
      * @var array Guarded fields
      */
@@ -40,5 +38,14 @@ class AvailablesCourses extends Model
     public $morphMany = [];
     public $attachOne = [];
     public $attachMany = [];
+
+    public static function boot()
+    {
+        static::creating(function ($model) {
+            $model->setCreatedAt($model->freshTimestamp());
+        });
+        
+        parent::boot();
+    }
 
 }
