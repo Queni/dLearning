@@ -9,6 +9,7 @@ class CreateNotificationsTable extends Migration
     public function up()
     {
         Schema::create('queni_dlearning_notifications', function(Blueprint $table) {
+            Schema::dropIfExists('queni_dlearning_notifications');
             $table->engine = 'InnoDB';
             $table->integer('user_id')->unsigned();
             $table->text('message');

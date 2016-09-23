@@ -9,6 +9,7 @@ class CreateAuthorsTable extends Migration
     public function up()
     {
         Schema::create('queni_dlearning_authors', function(Blueprint $table) {
+            Schema::dropIfExists('queni_dlearning_authors');
             $table->engine = 'InnoDB';
             $table->integer('course_id')->unsigned();
             $table->integer('user_id')->unsigned();

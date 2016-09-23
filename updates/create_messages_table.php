@@ -9,6 +9,7 @@ class CreateMessagesTable extends Migration
     public function up()
     {
         Schema::create('queni_dlearning_messages', function(Blueprint $table) {
+            Schema::dropIfExists('queni_dlearning_messages');
             $table->engine = 'InnoDB';
             $table->integer('sender_id')->unsigned();
             $table->integer('reciever_id')->unsigned();

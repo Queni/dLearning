@@ -9,6 +9,7 @@ class CreateCoursesTable extends Migration
     public function up()
     {
         Schema::create('queni_dlearning_courses', function(Blueprint $table) {
+            Schema::dropIfExists('queni_dlearning_courses');
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name', 200);

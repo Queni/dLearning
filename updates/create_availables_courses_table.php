@@ -9,6 +9,7 @@ class CreateAvailablesCoursesTable extends Migration
     public function up()
     {
         Schema::create('queni_dlearning_availables_courses', function(Blueprint $table) {
+            Schema::dropIfExists('queni_dlearning_availables_courses');
             $table->engine = 'InnoDB';
             $table->integer('course_id')->unsigned();
             $table->integer('user_id')->unsigned();

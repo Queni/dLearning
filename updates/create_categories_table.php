@@ -9,9 +9,10 @@ class CreateCategoriesTable extends Migration
     public function up()
     {
         Schema::create('queni_dlearning_categories', function(Blueprint $table) {
+            Schema::dropIfExists('queni_dlearning_categories');
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->string('name', 200);
+            $table->string('name', 200)->unique();
             $table->integer('parent_category_id')->unsigned()->nullable();
 
             $table->foreign('parent_category_id')
