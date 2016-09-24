@@ -1,8 +1,8 @@
 <?php namespace Queni\DLearning\Components;
 
 use Cms\Classes\ComponentBase;
-use Queni\DLearning\Models\Courses as CoursesModel;
 use Queni\DLearning\Models\Categories as CategoriesModel;
+use Queni\DLearning\Models\Courses as CoursesModel;
 
 class Courses extends ComponentBase
 {
@@ -24,13 +24,27 @@ class Courses extends ComponentBase
                 'default'           => 10,
                 'validationPattern' => '^[0-9]+$',
                 'validationMessage' => 'The Max Posts property can contain only numeric symbols'
+            ],
+            'currentCategory' => [
+                'title'             => 'Current category',
+                'description'       => 'Current category to display',
+                'default'           => '{{ :category }}'
             ]
         ];
     }
 
     public function list()
     {
-        return CoursesModel::paginate($this->param('maxPosts'));
+        $category = CategoriesModel::where('name', $this->param('currentCategory'))->first();
+
+        if ($category == null)
+        {
+            return CoursesModel::paginate($this->param('maxPosts'));
+        }
+        else
+        {
+            return $category->courses->paginate($this->param('maxPosts'));
+        }
     }
 
 }
