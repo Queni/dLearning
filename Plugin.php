@@ -87,17 +87,17 @@ class Plugin extends PluginBase
                 'sideMenu' => [
                     'courses' => [
                         'label'       => 'Курсы',
-                        'icon'        => 'icon-list-alt',
+                        'icon'        => 'icon-book',
                         'url'         => \Backend::url('queni/dlearning/courses'),
                     ],
                     'lessons' => [
                         'label'       => 'Уроки',
-                        'icon'        => 'icon-list-alt',
+                        'icon'        => 'icon-list-ol',
                         'url'         => \Backend::url('queni/dlearning/lessons'),
                     ],
                     'categories' => [
                         'label'       => 'Категории',
-                        'icon'        => 'icon-list-alt',
+                        'icon'        => 'icon-inbox',
                         'url'         => \Backend::url('queni/dlearning/categories'),
                     ],
                 ],
