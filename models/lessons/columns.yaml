@@ -6,7 +6,7 @@ columns:
     id:
         label: ID
         invisible: true
-    name:
+    title:
         label: Name
         searchable: true
     course:
