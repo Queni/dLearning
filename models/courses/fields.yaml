@@ -5,14 +5,24 @@
 tabs:
     defaultTab: Info about Course
     fields:
-        name:
+        title:
             label: Name
+        slug:
+            label: Slug
         category:
             label: Category
             type: dropdown
         content:
             label: Description
             type: richeditor
+        published_at:
+            label: Date
+            type: datepicker
+            mode: date
+        is_published:
+            label: Publish course
+            type: switch
+            comment: This switch to publish course
         authors@update:
             tab: Авторы
             type: partial
