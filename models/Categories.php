@@ -46,7 +46,7 @@ class Categories extends Model
      * @var bool
      */
 
-    public function getCategoryIdOptions()
+    public function getParentCategoryIdOptions()
     {
         $categories = Categories::orderBy('name')->get(['id', 'name']);
         $options = [0 => 'None'];

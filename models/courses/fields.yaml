@@ -7,7 +7,7 @@ tabs:
     fields:
         name:
             label: Name
-        category_id:
+        category:
             label: Category
             type: dropdown
         content:
