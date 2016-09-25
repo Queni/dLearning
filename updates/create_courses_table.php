@@ -8,13 +8,16 @@ class CreateCoursesTable extends Migration
 {
     public function up()
     {
-        Schema::create('queni_dlearning_courses', function(Blueprint $table) {
-            Schema::dropIfExists('queni_dlearning_courses');
+        Schema::create('queni_dlearning_courses', function(Blueprint $table)
+        {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->string('name', 200);
-            $table->text('description');
+            $table->string('title')->unique();
+            $table->string('slug')->index();
+            $table->text('content');
             $table->integer('category_id')->unsigned();
+            $table->timestamp('published_at')->nullable();
+            $table->boolean('is_published')->default(false);
             $table->timestamps();
             
             $table->foreign('category_id')

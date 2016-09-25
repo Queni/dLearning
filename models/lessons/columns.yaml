@@ -5,11 +5,12 @@
 columns:
     id:
         label: ID
+        invisible: true
     name:
-        label: Название
+        label: Name
         searchable: true
     course:
-        label: Курс
+        label: Course
         relation: course
         select: name
         searchable: true

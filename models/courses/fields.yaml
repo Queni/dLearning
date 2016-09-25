@@ -3,15 +3,15 @@
 # ===================================
 
 tabs:
-    defaultTab: Информация о курсе
+    defaultTab: Info about Course
     fields:
         name:
-            label: Название
-        category:
-            label: Категория
+            label: Name
+        category_id:
+            label: Category
             type: dropdown
-        description:
-            label: Описание
+        content:
+            label: Description
             type: richeditor
         authors@update:
             tab: Авторы

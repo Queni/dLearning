@@ -5,10 +5,12 @@
 columns:
     id:
         label: ID
+        invisible: true
     name:
-        label: Название
+        label: Name
         searchable: true
     category:
-        label: Родительская категория
+        label: Category
         relation: parent_category
         select: name
+        searchable: true
