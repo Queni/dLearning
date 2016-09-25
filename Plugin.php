@@ -92,7 +92,7 @@ class Plugin extends PluginBase
                     ],
                     'lessons' => [
                         'label'       => 'Уроки',
-                        'icon'        => 'icon-list-ol',
+                        'icon'        => 'icon-file-text-o',
                         'url'         => \Backend::url('queni/dlearning/lessons'),
                     ],
                     'categories' => [
