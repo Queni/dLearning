@@ -7,11 +7,17 @@ use Model;
  */
 class Courses extends Model
 {
+    use \October\Rain\Database\Traits\Validation;
 
     /**
      * @var string The database table used by the model.
      */
     public $table = 'queni_dlearning_courses';
+
+    public $rules = [
+        'title'    => 'required|between:6,255|unique:queni_dlearning_courses',
+        'title'    => 'date'
+    ];
 
     /**
      * @var array Guarded fields
@@ -45,12 +51,12 @@ class Courses extends Model
 
     public function getCategoryOptions()
     {
-        $categories = Categories::orderBy('name')->get(['id', 'name']);
+        $categories = Categories::orderBy('title')->get(['id', 'title']);
         $options = [];
 
         foreach($categories as $value)
         {
-            $options[$value['id']] = $value['name'];
+            $options[$value['id']] = $value['title'];
         }
 
         return $options;

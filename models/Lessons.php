@@ -36,7 +36,7 @@ class Lessons extends Model
     public $morphOne = [];
     public $morphMany = [];
     public $attachOne = [];
-    public $attachMany = [];
+    public $attachMany = ['attachments' => ['System\Models\File']];
 
     /**
      * Indicates if the model should be timestamped.
@@ -47,12 +47,12 @@ class Lessons extends Model
 
     public function getCourseOptions()
     {
-        $categories = Courses::orderBy('name')->get(['id', 'name']);
+        $categories = Courses::orderBy('title')->get(['id', 'title']);
         $options = [];
 
         foreach($categories as $value)
         {
-            $options[$value['id']] = $value['name'];
+            $options[$value['id']] = $value['title'];
         }
 
         return $options;

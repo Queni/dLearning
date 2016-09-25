@@ -12,5 +12,5 @@ columns:
     course:
         label: Course
         relation: course
-        select: name
+        select: title
         searchable: true

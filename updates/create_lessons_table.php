@@ -12,7 +12,8 @@ class CreateLessonsTable extends Migration
             Schema::dropIfExists('queni_dlearning_lessons');
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->string('name', 200);
+            $table->string('title');
+            $table->string('title')->unique();
             $table->text('content');
             $table->integer('course_id')->unsigned();
 

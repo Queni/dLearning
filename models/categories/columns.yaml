@@ -6,11 +6,11 @@ columns:
     id:
         label: ID
         invisible: true
-    name:
+    title:
         label: Name
         searchable: true
     category:
         label: Category
         relation: parent_category
-        select: name
+        select: title
         searchable: true

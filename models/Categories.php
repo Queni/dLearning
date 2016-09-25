@@ -48,12 +48,12 @@ class Categories extends Model
 
     public function getParentCategoryIdOptions()
     {
-        $categories = Categories::orderBy('name')->get(['id', 'name']);
+        $categories = Categories::orderBy('title')->get(['id', 'title']);
         $options = [0 => 'None'];
 
         foreach($categories as $value)
         {
-            $options[ $value['id'] ] = $value['name'];
+            $options[ $value['id'] ] = $value['title'];
         }
 
         return $options;

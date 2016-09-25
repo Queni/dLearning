@@ -13,6 +13,7 @@ class CreateCategoriesTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('title')->unique();
+            $table->string('slug')->index();
             $table->integer('parent_category_id')->unsigned()->nullable();
 
             $table->foreign('parent_category_id')

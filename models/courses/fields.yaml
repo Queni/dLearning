@@ -7,31 +7,36 @@ tabs:
     fields:
         title:
             label: Name
+            span: left
         slug:
             label: Slug
             span: right
             preset:
                 field: title
                 type: slug
+            disabled: true
         category:
             label: Category
             type: dropdown
-        content:
-            label: Description
-            type: richeditor
+            span: left
         published_at:
             label: Date
             type: datepicker
             mode: date
+            span: right
+        content:
+            label: Description
+            type: richeditor
         is_published:
             label: Publish course
             type: switch
             comment: This switch to publish course
+            span: left
         authors@update:
-            tab: Авторы
+            tab: Authors
             type: partial
             path: authors
         users@update:
-            tab: Доступ к курсу
+            tab: Access to course
             type: partial
             path: users

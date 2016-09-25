@@ -11,3 +11,6 @@ fields:
     content:
         label: Контент
         type: richeditor
+    attachments:
+        label: Файлы
+        type: fileupload
