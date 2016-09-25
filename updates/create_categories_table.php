@@ -12,7 +12,7 @@ class CreateCategoriesTable extends Migration
             Schema::dropIfExists('queni_dlearning_categories');
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->string('name', 200)->unique();
+            $table->string('title')->unique();
             $table->integer('parent_category_id')->unsigned()->nullable();
 
             $table->foreign('parent_category_id')
