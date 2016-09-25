@@ -9,6 +9,10 @@ tabs:
             label: Name
         slug:
             label: Slug
+            span: right
+            preset:
+                field: title
+                type: slug
         category:
             label: Category
             type: dropdown
