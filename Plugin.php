@@ -9,11 +9,6 @@ use System\Classes\PluginBase;
 class Plugin extends PluginBase
 {
     /**
-     * Require plugin.
-     */
-    public $require = ['RainLab.User'];
-
-    /**
      * Returns information about this plugin.
      *
      * @return array
@@ -22,7 +17,7 @@ class Plugin extends PluginBase
     {
         return [
             'name'        => 'dLearning',
-            'description' => 'Learning management system.',
+            'description' => 'Learning management system for OctoberCMS.',
             'author'      => 'Rulan Puryaev, Aleksei Fedorov',
             'icon'        => 'icon-graduation-cap',
             'homepage'    => 'https://github.com/queni/dlearning'
@@ -86,7 +81,7 @@ class Plugin extends PluginBase
             'dlearning' => [
                 'label'       => 'dLearning',
                 'url'         => Backend::url('queni/dlearning/courses'),
-                'icon'        => 'icon-leaf',
+                'icon'        => 'icon-graduation-cap',
                 'permissions' => ['queni.dlearning.*'],
                 'order'       => 500,
                 'sideMenu' => [
