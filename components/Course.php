@@ -27,7 +27,7 @@ class Course extends ComponentBase
 
     public function info()
     {
-        $currentCourse = $this->param('currentCourse');
+        $currentCourse = $this->property('currentCourse');
 
         if ($currentCourse == null) return null;
 

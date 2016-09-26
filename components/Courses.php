@@ -27,7 +27,7 @@ class Courses extends ComponentBase
             ],
             'currentCategory' => [
                 'title'             => 'Current category',
-                'description'       => 'Current category to display',
+                'description'       => 'Current category to display courses',
                 'default'           => '{{ :category }}'
             ]
         ];
@@ -35,16 +35,21 @@ class Courses extends ComponentBase
 
     public function list()
     {
-        $currentCategory = $this->param('currentCategory');
-        $maxPosts = $this->param('maxPosts');
+        $currentCategory = $this->property('currentCategory');
+        $maxPosts = $this->property('maxPosts');
 
-        if ($currentCategory == null) return null;
+        if ($currentCategory)
+        {
+            $category = CategoriesModel::where('slug', $currentCategory)->first();
 
-        $category = CategoriesModel::where('title', $currentCategory)->get();
-
-        if ($category == null) return null;
+            if ($category == null) return null;
         
-        return $category->courses->paginate($maxPosts);
+            return $category->courses()->paginate($maxPosts);
+        }
+        else
+        {
+            return CoursesModel::paginate($maxPosts);
+        }
     }
 
 }
