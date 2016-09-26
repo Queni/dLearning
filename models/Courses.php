@@ -16,7 +16,7 @@ class Courses extends Model
 
     public $rules = [
         'title'    => 'required|between:6,255|unique:queni_dlearning_courses',
-        'title'    => 'date'
+        'published_at'    => 'date'
     ];
 
     /**

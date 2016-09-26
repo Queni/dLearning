@@ -3,8 +3,15 @@
 # ===================================
 
 fields:
-    name:
+    title:
         label: Название
+        span: left
+    slug:
+        label: Шифр
+        span: right
+        preset:
+            field: title
+            type: slug
     parent_category_id:
         label: Родительская категория
         type: dropdown

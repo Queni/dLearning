@@ -6,8 +6,16 @@ fields:
     course:
         label: Курс
         type: dropdown
-    name:
+        span: right
+    title:
         label: Название
+        span: left
+    slug:
+        label: Шифр
+        span: left
+        preset:
+            field: title
+            type: slug
     content:
         label: Контент
         type: richeditor
