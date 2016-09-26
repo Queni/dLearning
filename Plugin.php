@@ -54,6 +54,9 @@ class Plugin extends PluginBase
         return [
             'Queni\DLearning\Components\Categories' => 'categories',
             'Queni\DLearning\Components\Courses' => 'courses',
+            'Queni\DLearning\Components\Lessons' => 'lessons',
+            'Queni\DLearning\Components\Lesson' => 'lesson',
+            'Queni\DLearning\Components\Course' => 'course',
         ];
     }
 
