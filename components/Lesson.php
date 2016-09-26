@@ -15,7 +15,13 @@ class Lesson extends ComponentBase
 
     public function defineProperties()
     {
-        return [];
+        return [
+            'currentLesson' => [
+                'title'             => 'Current category',
+                'description'       => 'Current category to display',
+                'default'           => '{{ :lesson }}'
+            ]
+        ];
     }
 
 }
