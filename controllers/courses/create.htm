@@ -1,7 +1,7 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('queni/dlearning/courses') ?>">Courses</a></li>
-        <li><?= e($this->pageTitle) ?></li>
+        <li><a href="<?= Backend::url('queni/dlearning/courses') ?>"><?= e(trans('queni.dlearning::lang.dlearning.courses')) ?></a></li>
+        <li><?= e(trans('queni.dlearning::lang.dlearning.new_course')) ?></li>
     </ul>
 <?php Block::endPut() ?>
 
@@ -21,7 +21,7 @@
                     data-hotkey="ctrl+s, cmd+s"
                     data-load-indicator="Creating Course..."
                     class="btn btn-primary">
-                    Create
+                    <?= e(trans('queni.dlearning::lang.dlearning.create')) ?>
                 </button>
                 <button
                     type="button"
@@ -30,10 +30,10 @@
                     data-hotkey="ctrl+enter, cmd+enter"
                     data-load-indicator="Creating Course..."
                     class="btn btn-default">
-                    Create and Close
+                    <?= e(trans('queni.dlearning::lang.dlearning.create_and_close')) ?>
                 </button>
                 <span class="btn-text">
-                    or <a href="<?= Backend::url('queni/dlearning/courses') ?>">Cancel</a>
+                    <?= e(trans('queni.dlearning::lang.dlearning.or')) ?> <a href="<?= Backend::url('queni/dlearning/courses') ?>"><?= e(trans('queni.dlearning::lang.dlearning.cancel')) ?></a>
                 </span>
             </div>
         </div>
@@ -43,6 +43,6 @@
 <?php else: ?>
 
     <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-    <p><a href="<?= Backend::url('queni/dlearning/courses') ?>" class="btn btn-default">Return to courses list</a></p>
+    <p><a href="<?= Backend::url('queni/dlearning/courses') ?>" class="btn btn-default"><?= e(trans('queni.dlearning::lang.dlearning.return_course_list')) ?></a></p>
 
 <?php endif ?>

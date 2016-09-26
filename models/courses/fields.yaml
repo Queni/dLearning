@@ -3,40 +3,40 @@
 # ===================================
 
 tabs:
-    defaultTab: Info about Course
+    defaultTab: queni.dlearning::lang.dlearning.info_course
     fields:
         title:
-            label: Name
+            label: queni.dlearning::lang.dlearning.title
             span: left
         slug:
-            label: Slug
+            label: queni.dlearning::lang.dlearning.slug
             span: right
             preset:
                 field: title
                 type: slug
             disabled: true
         category:
-            label: Category
+            label: queni.dlearning::lang.dlearning.category
             type: dropdown
             span: left
         published_at:
-            label: Date
+            label: queni.dlearning::lang.dlearning.date
             type: datepicker
             mode: date
             span: right
         content:
-            label: Description
+            label: queni.dlearning::lang.dlearning.description
             type: richeditor
         is_published:
-            label: Publish course
+            label: queni.dlearning::lang.dlearning.is_published
             type: switch
-            comment: This switch to publish course
+            comment: queni.dlearning::lang.dlearning.is_published_course_comment
             span: left
         authors@update:
-            tab: Authors
+            tab: queni.dlearning::lang.dlearning.authors
             type: partial
             path: authors
         users@update:
-            tab: Access to course
+            tab: queni.dlearning::lang.dlearning.access_to_course
             type: partial
             path: users

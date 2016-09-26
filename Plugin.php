@@ -16,9 +16,9 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'dLearning',
-            'description' => 'Learning management system for OctoberCMS.',
-            'author'      => 'Rulan Puryaev, Aleksei Fedorov',
+            'name'        => 'queni.dlearning::lang.plugin.name',
+            'description' => 'queni.dlearning::lang.plugin.description',
+            'author'      => 'queni.dlearning::lang.plugin.authors',
             'icon'        => 'icon-graduation-cap',
             'homepage'    => 'https://github.com/queni/dlearning'
         ];
@@ -79,24 +79,24 @@ class Plugin extends PluginBase
     {
         return [
             'dlearning' => [
-                'label'       => 'dLearning',
+                'label'       => 'queni.dlearning::lang.dlearning.name_plugin',
                 'url'         => Backend::url('queni/dlearning/courses'),
                 'icon'        => 'icon-graduation-cap',
                 'permissions' => ['queni.dlearning.*'],
                 'order'       => 500,
                 'sideMenu' => [
                     'courses' => [
-                        'label'       => 'Courses',
+                        'label'       => 'queni.dlearning::lang.dlearning.courses',
                         'icon'        => 'icon-book',
                         'url'         => \Backend::url('queni/dlearning/courses'),
                     ],
                     'lessons' => [
-                        'label'       => 'Lessons',
+                        'label'       => 'queni.dlearning::lang.dlearning.lessons',
                         'icon'        => 'icon-file-text-o',
                         'url'         => \Backend::url('queni/dlearning/lessons'),
                     ],
                     'categories' => [
-                        'label'       => 'Categories',
+                        'label'       => 'queni.dlearning::lang.dlearning.categories',
                         'icon'        => 'icon-inbox',
                         'url'         => \Backend::url('queni/dlearning/categories'),
                     ],

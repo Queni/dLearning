@@ -4,13 +4,13 @@
 
 columns:
     id:
-        label: ID
+        label: queni.dlearning::lang.dlearning.id
         invisible: true
     title:
-        label: Name
+        label: queni.dlearning::lang.dlearning.title
         searchable: true
     category:
-        label: Category
+        label: queni.dlearning::lang.dlearning.category
         relation: category
         select: title
         searchable: true
