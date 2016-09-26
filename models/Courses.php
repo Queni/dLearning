@@ -34,7 +34,7 @@ class Courses extends Model
      */
     public $hasOne = [];
     public $hasMany = [
-        'lessons' => ['Queni\DLearning\Models\Lessons', 'key' => 'course_id', 'otherKey' => 'id']
+        'lessons' => ['Queni\DLearning\Models\Lessons', 'key' => 'course_id']
     ];
     public $belongsTo = [
         'category' => ['Queni\DLearning\Models\Categories']
