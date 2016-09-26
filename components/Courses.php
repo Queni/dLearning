@@ -35,16 +35,16 @@ class Courses extends ComponentBase
 
     public function list()
     {
-        $category = CategoriesModel::where('name', $this->param('currentCategory'))->first();
+        $currentCategory = $this->param('currentCategory');
+        $maxPosts = $this->param('maxPosts');
 
-        if ($category == null)
-        {
-            return CoursesModel::paginate($this->param('maxPosts'));
-        }
-        else
-        {
-            return $category->courses->paginate($this->param('maxPosts'));
-        }
+        if ($currentCategory == null) return null;
+
+        $category = CategoriesModel::where('title', $currentCategory)->get();
+
+        if ($category == null) return null;
+        
+        return $category->courses->paginate($maxPosts);
     }
 
 }
