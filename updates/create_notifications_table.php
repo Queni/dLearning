@@ -12,9 +12,10 @@ class CreateNotificationsTable extends Migration
             Schema::dropIfExists('queni_dlearning_notifications');
             $table->engine = 'InnoDB';
             $table->integer('user_id')->unsigned();
+            $table->integer('type')->unsigned();
             $table->text('message');
             $table->boolean('is_read');
-            $table->timestamps();
+            $table->timestamp('created_at');
 
             $table->primary('user_id');
 

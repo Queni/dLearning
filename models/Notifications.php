@@ -38,4 +38,11 @@ class Notifications extends Model
     public $attachOne = [];
     public $attachMany = [];
 
+    /**
+     * Indicates if the model should be timestamped.
+     *
+     * @var bool
+     */
+     public $timestamps = flase;
+
 }
